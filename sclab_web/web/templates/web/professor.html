@@ -1,0 +1,133 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="shortcut icon" href="assets/ico/favicon.ico">
+
+  <title>INU Scalable Computing Lab</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+  <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
+
+
+  <!-- Just for debugging purposes. Don't actually copy this line! -->
+  <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <script src="{% static 'js/modernizr.js' %}"></script>
+</head>
+
+<body>
+
+  <!-- Fixed navbar -->
+  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="{% url 'index' %}">INU Scalable Computing Lab</a>
+      </div>
+      <div class="navbar-collapse collapse navbar-right">
+        <ul class="nav navbar-nav">
+          <li><a href="{% url 'professor'%}">Professor</a></li>
+          <li><a href="{% url 'members'%}">Members</a></li>
+          <li><a href="{% url 'news'%}">News</a></li>
+          <li><a href="{% url 'publication'%}">Publication</a></li>
+          <li><a href="{% url 'project'%}">Project</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+
+  <!-- *****************************************************************************************************************
+  TITLE & CONTENT
+  ***************************************************************************************************************** -->
+
+  <div class="container mt">
+    <div class="row">
+
+      <div class="col-lg-4 col-lg-offset-1">
+        <div class="spacing"></div>
+        <div class="spacing"></div>
+        <div class="centered">
+          <img src="assets/img/team/Jibum kim.jpg" alt="">
+        </div>
+        <div class="spacing"></div>
+        <h2>Jibum Kim</h2>
+        <div class="hline"></div>
+        <h4>Assistant Professor</h4>
+        <p>Department of Computer Science and Enginnering</p>
+        <p><b>Office: </b> Information Science and Technology Building (7th Building) 525</p>
+        <p><b>Tel: </b>82-32-835-8655</p>
+        <p><b>E-mail: </b> jibumkim@incheon.ac.kr</p>
+      </div>
+
+      <div class="col-lg-5 col-lg-offset-1">
+        <div class="spacing"></div>
+        <h4>Education</h4>
+        <ul>
+          <li><b>Ph.D.</b> Pennsylvania State University, Computer Science and Engineering (2012)</li>
+          <li><b>MS</b> Pennsylvania State University, Computer Science and Engineering (2009)</li>
+          <li><b>MS</b> Yonsei University, Electrical and Electronic Engineering (2005)</li>
+          <li><b>BS</b> Yonsei University, Electrical and Electronic Engineering (2003)</li>
+        </ul>
+        <h4>Experience</h4>
+        <ul>
+          <li>2013 - Present, Incheon National University, Incheon, South Korea - Assistant Professor, Department of Computer Science and Enginnering</li>
+          <li>2013, Los Alalmos National Laboratory, Los Alamos, NM - Post Doc, Theoretical Division (T-5 group)</li>
+          <li>2012, Lawrence Livermore National Laboratory, Livermore, CA - Summer Intern, Institute for Scientific Computing Research (ISCR)</li>
+          <li>2009, Samsung Electronics, Suwon, South Korea - Summer Intern, DMC Division (WiMax group)</li>
+        </ul>
+      </div>
+
+    </div><!--/row -->
+  </div><!--/container -->
+
+  <!-- *****************************************************************************************************************
+  FOOTER
+  ***************************************************************************************************************** -->
+  <div id="footerwrap">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1>SCLAB.</h1>
+          <!--<img src="assets/img/logo.png" class="img-responsive">-->
+          <h5>Department of Computer Science & Engineering, Incheon National University 406-772, Korea</h5>
+          <h5>COPYRIGHT (C) 2018 SCLAB. ALL RIGHTS RESERVED</h5>
+        </div>
+      </div><!--/row -->
+    </div><!--/container -->
+  </div><!--/footerwrap -->
+
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/retina-1.1.0.js"></script>
+  <script src="assets/js/jquery.hoverdir.js"></script>
+  <script src="assets/js/jquery.hoverex.min.js"></script>
+  <script src="assets/js/jquery.prettyPhoto.js"></script>
+  <script src="assets/js/jquery.isotope.min.js"></script>
+  <script src="assets/js/custom.js"></script>
+
+</body>
+</html>
