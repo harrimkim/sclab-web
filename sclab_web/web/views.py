@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import *
 
 # Create your views here.
 def index(request):
@@ -8,13 +9,17 @@ def professor(request):
     return render(request, 'web/professor.html')
 
 def members(request):
-    return render(request, 'web/members.html')
+    members = Member.objects.all()
+    return render(request, 'web/members.html', {'members' : members})
 
 def news(request):
-    return render(request, 'web/news.html')
+    news = Post.objects.all()
+    return render(request, 'web/news.html', {'news' : news})
 
 def publication(request):
-    return render(request, 'web/publication.html')
+    publications = Publication.objects.all()
+    return render(request, 'web/publication.html', {'publications' : publications})
 
 def project(request):
-    return render(request, 'web/project.html')
+    projects = Project.objects.all()
+    return render(request, 'web/project.html', {'projects' : projects})

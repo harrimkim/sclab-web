@@ -1,6 +1,9 @@
 from django.conf.urls import url
 from . import views
 from django.urls import include, path
+from django.conf.urls.static import static
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from django.conf import settings
 
 urlpatterns = [
     path('', views.index, name='index'),
@@ -10,3 +13,6 @@ urlpatterns = [
     path('publication', views.publication, name='publication'),
     path('project', views.project, name='project'),
 ]
+
+urlpatterns += staticfiles_urlpatterns()
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
