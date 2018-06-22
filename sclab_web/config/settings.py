@@ -28,7 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
-    '.elasticbeanstalk.com',
+    'ec2-13-125-207-49.ap-northeast-2.compute.amazonaws.com',
     '.kro.kr',
 ]
 
