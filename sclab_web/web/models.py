@@ -49,7 +49,7 @@ class Member(models.Model):
     degree = models.CharField(max_length=20, default="BS Student")
     email = models.EmailField()
     phone = models.CharField(max_length=20)
-    image = models.ImageField(upload_to="web/members/image", default="/dd")
+    image = models.ImageField(upload_to="web/members/image", default="web/members/image/base.jpg")
     graduated = models.BooleanField()
     company = models.CharField(max_length=30, blank=True)
 

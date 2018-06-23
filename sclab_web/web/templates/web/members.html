@@ -8,53 +8,37 @@ TEEAM MEMBERS
 
 <div class="container mtb">
   <div class="row centered">
-    <br>
-    <br>
     <h1 class="mb">Current Members</h1>
   </div>
   <div class="row centered">
 
-    {% for i in "ggjjjjj" %}
-    {% for member in members %}
+    {% for member in currents %}
     <div class="col-lg-3 col-md-3 col-sm-3">
-      <div class="he-wrap tpl6">
-        <img src="{{ member.image.url }}" width="1000" height="1000" alt="">
-        <div class="he-view">
-          <div class="bg a0" data-animate="fadeIn">
-            <h3 class="a1" data-animate="fadeInDown">Contact Me:</h3>
-            <a href="#" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-envelope"></i></a>
-            <a href="#" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-twitter"></i></a>
-          </div><!-- he bg -->
-        </div><!-- he view -->
-      </div><!-- he wrap -->
+      <img src="{{ member.image.url }}" width="1000" height="1000" alt="">
       <h4>{{ member.ename }}, {{ member.kname }}</h4>
       <h5 class="ctitle">{{ member.degree }}</h5>
       <p>{{ member.email }}</p>
     </div><!--/col-lg-3 -->
-    {% endfor %}
     {% endfor %}
 
   </div><!--/row -->
 
   <div class="container mtb">
     <div class="row centered">
-      <br>
-      <br>
-      <h1 class="mb">Graduates</h1>
+      <h1 class="mb">Graduated Members</h1>
     </div>
     <div class="row centered">
 
-      {% for i in "ggjjjjj" %}
-      {% for member in members %}
+      {% for member in graduates %}
       <div class="col-lg-3 col-md-3 col-sm-3">
         <h4>{{ member.ename }}, {{ member.kname }}</h4>
         <h5 class="ctitle">{{ member.degree }}</h5>
-        <p>{{ member.email }}</p>
+        <p>{{ member.company }}</p>
       </div><!--/col-lg-3 -->
-      {% endfor %}
       {% endfor %}
 
     </div><!--/row -->
   </div>
 </div>
 {% endblock %}
+
