@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import *
+from django.db.models import Count
 
 # Create your views here.
 def index(request):
@@ -23,10 +24,13 @@ def news(request):
     return render(request, 'web/news.html', {'news' : news})
 
 def publication(request):
-    publications = Publication.objects.all()
-    return render(request, 'web/publication.html', {'publications' : publications})
+    publications = Publication.objects.values('date').annotate(Count('date'))
+    for pub in publications:
+        d = dict()
+        d['pub'] = Publication.objects.filter(date=pub['date'])
+        pub.update(d)
+    return render(request, 'web/publication.html', {'publications' : publications[::-1]})
 
 def project(request):
     projects = Project.objects.all().order_by('-id')
     return render(request, 'web/project.html', {'projects' : projects})
-

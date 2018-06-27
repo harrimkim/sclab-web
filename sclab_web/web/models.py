@@ -71,7 +71,7 @@ class Publication(models.Model):
     title = models.CharField(max_length=200)
     author = models.CharField(max_length=200)
     journal = models.CharField(max_length=200)
-    date = models.DateTimeField(default=timezone.now)
+    date = models.CharField(max_length=200)
 
     def __str__(self):
         return self.title
@@ -84,4 +84,3 @@ class Project(models.Model):
 
     def __str__(self):
         return self.title
-
