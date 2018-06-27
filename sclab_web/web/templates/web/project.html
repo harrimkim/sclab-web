@@ -1,25 +1,29 @@
 {% extends 'web/base.html' %}
 
 {% block content %}
+<div class="container mtb">
+  <div class="spacing"></div>
+  <div class="spacing"></div>
+  <div class="spacing"></div>
+  <div class="row centered">
+    <h1 class="mb">Projects</h1>
+  </div>
+  <div class="row">
 
-  <div class="container mtb">
-    <div class="row centered">
-      <br>
-      <br>
-      <h1 class="mb">Projects</h1>
-    </div>
-    <div class="row centered">
-
-      <div class="col-lg-10 col-lg-offset-1">
-        <div class="spacing"></div>
-        <ul>
-          <li>2013 - Present, Incheon National University, Incheon, South Korea - Assistant Professor, Department of Computer Science and Enginnering</li>
-          <li>2013, Los Alalmos National Laboratory, Los Alamos, NM - Post Doc, Theoretical Division (T-5 group)</li>
-          <li>2012, Lawrence Livermore National Laboratory, Livermore, CA - Summer Intern, Institute for Scientific Computing Research (ISCR)</li>
-          <li>2009, Samsung Electronics, Suwon, South Korea - Summer Intern, DMC Division (WiMax group)</li>
-        </ul>
-      </div>
-
-    </div><!--/row -->
-  </div><!--/container -->
+    <!-- BLOG POSTS LIST -->
+    <div class="col-lg-10 col-lg-offset-1">
+      <ul>
+        <!-- Blog Post -->
+        {% for project in projects %}
+        <li>
+          <h3>{{ project.title }} ( {{ project.date }} )</h3>
+          <h5>지원 기관 : {{ project.organization }} / 총 연구비 : {{ project.cost }}</h5>
+          <div class="spacing"></div>
+        </li>
+        {% endfor %}
+    </ul>
+    </div><!--/col-lg-8 -->
+  </div><!--/row -->
+</div><!--/container -->
 {% endblock %}
+

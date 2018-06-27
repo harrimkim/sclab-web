@@ -3,10 +3,15 @@ from .models import *
 
 # Create your views here.
 def index(request):
-    return render(request, 'web/index.html')
+    news = Post.objects.all().order_by('-id')
+    return render(request, 'web/index.html', {'news' : news})
 
 def professor(request):
-    return render(request, 'web/professor.html')
+    professors = Professor.objects.all()
+    educations = Education.objects.all().order_by('-id')
+    experiences = Experience.objects.all().order_by('-id')
+    lectures = Lecture.objects.all()
+    return render(request, 'web/professor.html', {'professors' : professors, 'educations' : educations, 'experiences' : experiences, 'lectures' : lectures})
 
 def members(request):
     currents = Member.objects.filter(graduated=False).order_by('-degree')
@@ -14,7 +19,7 @@ def members(request):
     return render(request, 'web/members.html', {'currents' : currents, 'graduates' : graduates})
 
 def news(request):
-    news = Post.objects.all()
+    news = Post.objects.all().order_by('-id')
     return render(request, 'web/news.html', {'news' : news})
 
 def publication(request):
@@ -22,5 +27,6 @@ def publication(request):
     return render(request, 'web/publication.html', {'publications' : publications})
 
 def project(request):
-    projects = Project.objects.all()
+    projects = Project.objects.all().order_by('-id')
     return render(request, 'web/project.html', {'projects' : projects})
+

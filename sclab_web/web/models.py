@@ -12,17 +12,19 @@ class Lab(models.Model):
 class Professor(models.Model):
     kname = models.CharField(max_length=20)
     ename = models.CharField(max_length=30)
+    state = models.CharField(max_length=200, default=".")
     organization = models.CharField(max_length=200)
     phone = models.CharField(max_length=30)
     email = models.CharField(max_length=30)
     address = models.CharField(max_length=200)
+    image = models.ImageField(upload_to="web/posts/title/image", default="/dd")
 
     def __str__(self):
         return self.kname
 
 class Education(models.Model):
     degree = models.CharField(max_length=200)
-    oranization = models.CharField(max_length=200)
+    organization = models.CharField(max_length=200)
     date = models.CharField(max_length=200)
 
     def __str__(self):
@@ -76,9 +78,10 @@ class Publication(models.Model):
 
 class Project(models.Model):
     title = models.CharField(max_length=200)
-    date = models.DateTimeField(default=timezone.now)
+    date = models.CharField(max_length=200)
     organization = models.CharField(max_length=200)
     cost = models.CharField(max_length=200)
 
     def __str__(self):
         return self.title
+

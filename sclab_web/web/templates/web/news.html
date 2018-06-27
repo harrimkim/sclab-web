@@ -3,44 +3,29 @@
 {% block content %}
 
 <div class="container mtb">
+  <div class="spacing"></div>
+  <div class="spacing"></div>
+  <div class="spacing"></div>
   <div class="row centered">
-    <br>
-    <br>
     <h1 class="mb">News</h1>
   </div>
   <div class="row">
 
     <!-- BLOG POSTS LIST -->
     <div class="col-lg-10 col-lg-offset-1">
-      <!-- Blog Post 1 -->
-      <p class="centered"><img class="img-responsive" src="assets/img/스승의날.jpg"></p>
-      <a href="single-post.html"><h3>스승의날 2018 (서울, 구로)</h3></a>
-      <p><csmall>Posted: May 25, 2018.</csmall>
-        <p>스승의 날 모임 at 서울 구로</p>
-        <p>하림, 명규, 욱현, 우진, 영훈, 현정, 재용, 준혁 </p>
-        <p><a href="single-post.html">[Read More]</a></p>
-        <div class="spacing"></div>
 
-        <!-- Blog Post 2 -->
-        <p><img class="img-responsive center" src="assets/img/KSC학회.jpg" width="1000"></p>
-        <a href="single-post.html"><h3>KSC 학회 2017 (부산, 벡스코)</h3></a>
-        <p><csmall>Posted: April 25, 2014.</csmall>
-          <p>2017 한국 소프트웨어 종합 학술대회 참가, 부산 벡스코</p>
-          <p>2017.12.20 - 2017.12.22</p>
-          <p>수경, 지연, 하림, 준혁, 영훈</p>
-          <p><a href="single-post.html">[Read More]</a></p>
-          <div class="spacing"></div>
+      <!-- Blog Post -->
+      {% for new in news %}
+      <p class="centered"><img class="img-responsive" src="{{ new.image.url }}"></p>
+      <h3>{{ new.title }}</h3>
+      <p><csmall>{{ new.date }}</csmall>
+      <p>{{ new.content}}</p>
+      <div class="spacing"></div>
+      {% endfor %}
 
-          <!-- Blog Post 3 -->
-          <p><img class="img-responsive" src="assets/img/post03.jpg" width="1000"></p>
-          <a href="single-post.html"><h3>Logo design contest starts now.</h3></a>
-          <p><csmall>Posted: April 25, 2014.</csmall>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-            <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-            <p><a href="single-post.html">[Read More]</a></p>
-          </div><!--/col-lg-8 -->
+    </div><!--/col-lg-8 -->
+  </div><!--/row -->
+</div><!--/container -->
 
-        </div><!--/row -->
-      </div><!--/container -->
+{% endblock %}
 
-      {% endblock %}
