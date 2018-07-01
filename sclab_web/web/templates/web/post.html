@@ -6,24 +6,13 @@
   <div class="spacing"></div>
   <div class="spacing"></div>
   <div class="row centered">
-    <h1 class="mb">Projects</h1>
+    <h1 class="mb">{{ post.title }}</h1>
   </div>
   <div class="row">
 
     <!-- BLOG POSTS LIST -->
     <div class="col-lg-10 col-lg-offset-1">
-      <ul>
-        <!-- Blog Post -->
-        {% for new in news %}
-        <a href="/news/{{ new.id }}">
-          <li>
-            <h3>{{ new.title }}</h3>
-            <h5>{{ new.date }}</h5>
-            <div class="spacing"></div>
-          </li>
-        </a>
-        {% endfor %}
-    </ul>
+      {{ post.content|safe }}
     </div><!--/col-lg-8 -->
   </div><!--/row -->
 </div><!--/container -->

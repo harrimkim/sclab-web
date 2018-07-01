@@ -23,6 +23,10 @@ def news(request):
     news = Post.objects.all().order_by('-id')
     return render(request, 'web/news.html', {'news' : news})
 
+def posts(request, id):
+    post = Post.objects.get(id=id)
+    return render(request, 'web/post.html', {'post' : post})
+
 def publication(request):
     publications = Publication.objects.values('date').annotate(Count('date'))
     for pub in publications:

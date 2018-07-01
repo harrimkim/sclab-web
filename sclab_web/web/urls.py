@@ -10,6 +10,7 @@ urlpatterns = [
     path('professor', views.professor, name='professor'),
     path('members', views.members, name='members'),
     path('news', views.news, name='news'),
+    path('news/<int:id>', views.posts, name="posts"),
     path('publication', views.publication, name='publication'),
     path('project', views.project, name='project'),
 ]
