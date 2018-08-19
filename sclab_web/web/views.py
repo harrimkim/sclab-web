@@ -20,8 +20,7 @@ def members(request):
     return render(request, 'web/members.html', {'currents' : currents, 'graduates' : graduates})
 
 def location(request):
-    news = Post.objects.all().order_by('-id')
-    return render(request,'web/index.html', {'news' : news})
+    return render(request,'web/location.html')
 
 def news(request):
     news = Post.objects.all().order_by('-id')
