@@ -46,6 +46,10 @@ p {
 	margin-top: 10px;
 }
 
+p > img {
+	display: inline;
+}
+
 img {
 	height: auto;
 	max-width: 100%;

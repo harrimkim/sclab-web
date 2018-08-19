@@ -62,7 +62,6 @@ class Post(models.Model):
     title = models.CharField(max_length=200)
     content = models.TextField()
     date = models.DateTimeField(default=timezone.now)
-    image = models.ImageField(upload_to="web/posts/title/image", default="/dd")
 
     def __str__(self):
         return self.title

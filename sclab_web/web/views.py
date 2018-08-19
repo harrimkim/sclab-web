@@ -19,6 +19,10 @@ def members(request):
     graduates = Member.objects.filter(graduated=True).exclude(company__isnull=True).exclude(company="").order_by('-degree')
     return render(request, 'web/members.html', {'currents' : currents, 'graduates' : graduates})
 
+def location(request):
+    news = Post.objects.all().order_by('-id')
+    return render(request,'web/index.html', {'news' : news})
+
 def news(request):
     news = Post.objects.all().order_by('-id')
     return render(request, 'web/news.html', {'news' : news})
