@@ -59,7 +59,7 @@ class Member(models.Model):
         return self.kname
 class Link(models.Model):
     title = models.CharField(max_length=200)
-    date = models.CharField(max_length=200, default='')
+    link = models.CharField(max_length=200, default='')
     def __str__(self):
         return self.title
     
