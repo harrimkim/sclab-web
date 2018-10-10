@@ -32,7 +32,7 @@ def posts(request, id):
 
 def publication(request):
     publications = Publication.objects.values('date').annotate(Count('date'))
-    links = Link.objects.values.all()
+    links = link.objects.values.all()
     for pub in publications:
         d = dict()
         d['pub'] = Publication.objects.filter(date=pub['date'])
