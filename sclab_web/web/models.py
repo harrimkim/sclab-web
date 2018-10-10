@@ -71,7 +71,7 @@ class Publication(models.Model):
     author = models.CharField(max_length=200)
     journal = models.CharField(max_length=200)
     date = models.CharField(max_length=200, default='')
-
+    link = models.CharField(max_length=200, default='')
     def __str__(self):
         return self.title
 
