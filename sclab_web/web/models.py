@@ -57,7 +57,12 @@ class Member(models.Model):
 
     def __str__(self):
         return self.kname
-
+class Link(models.Model):
+    title = models.CharField(max_length=200)
+    date = models.CharField(max_length=200, default='')
+    def __str__(self):
+        return self.title
+    
 class Post(models.Model):
     title = models.CharField(max_length=200)
     content = models.TextField()
