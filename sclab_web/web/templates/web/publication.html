@@ -14,11 +14,11 @@
       <ul>
         {% for p in pub.pub %}
         {% if p.link %}
-          <a href="{{p.link}}" />
+          <a href="{{p.link}}">
         {% endif %}
           <li style="margin-bottom: 10px;"><strong style="color: #3b5998">{{ p.title }}</strong><br>
         {% if p.link %}
-          <a href="{{p.link}}" />
+          </a>
         {% endif %}
           {{ p.author }}<br>
           <i>{{ p.journal }}, {{ p.date }}</i>
