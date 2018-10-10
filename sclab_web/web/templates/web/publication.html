@@ -14,9 +14,6 @@
       <ul>
         {% for p in pub.pub %}
           {% for link in links %}
-            {% if link.title == p.title %}
-                {% link.link %}
-            {% endif %}
           <li style="margin-bottom: 10px;"><strong style="color: #3b5998">{{ p.title }}</strong><br>
           {{ p.author }}<br>
           <i>{{ p.journal }}, {{ p.date }}</i>
