@@ -15,7 +15,7 @@
         {% for p in pub.pub %}
         {% if p.link %}
           {% load static %}
-          <a href="{% static "pdf/2008_imr25Poster_Kim.pdf" %}" >
+          <a href="{% static "pdf/"{{ p.link }} %}" >
         {% endif %}
           <li style="margin-bottom: 10px;"><strong style="color: #3b5998">{{ p.title }}</strong><br>
         {% if p.link %}
