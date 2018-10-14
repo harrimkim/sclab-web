@@ -14,7 +14,7 @@
       <ul>
         {% for p in pub.pub %}
         {% if p.link %}
-          <a href="{{p.link}}">
+          <a href="{{p.link}}" download>
         {% endif %}
           <li style="margin-bottom: 10px;"><strong style="color: #3b5998">{{ p.title }}</strong><br>
         {% if p.link %}
