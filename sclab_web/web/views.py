@@ -4,7 +4,7 @@ from django.db.models import Count
 
 # Create your views here.
 def index(request):
-    news = Post.objects.all().order_by('-id')
+    news = New.objects.all().order_by('-id')
     return render(request, 'web/index.html', {'news' : news})
 
 def professor(request):
