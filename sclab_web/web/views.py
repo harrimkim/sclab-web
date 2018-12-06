@@ -23,7 +23,7 @@ def location(request):
     return render(request,'web/location.html')
 
 def news(request):
-    news = Post.objects.all().order_by('-id')
+    news = New.objects.all().order_by('-id')
     return render(request, 'web/news.html', {'news' : news})
 
 def posts(request, id):
