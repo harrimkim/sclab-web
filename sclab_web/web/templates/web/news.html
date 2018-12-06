@@ -17,8 +17,7 @@
         {% for new in news %}
         <a href="/news/{{ new.id }}">
           <li>
-            <h3>{{ new.title }}</h3>
-            <h5>{{ new.date }}</h5>
+            <h3>{{ new.title }}{{ new.date }}</h3>
             <div class="spacing"></div>
           </li>
         </a>
