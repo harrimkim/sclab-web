@@ -28,7 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
-    'ec2-13-125-207-49.ap-northeast-2.compute.amazonaws.com',
+    'ec2-54-180-121-244.ap-northeast-2.compute.amazonaws.com',
     '.kro.kr',
 ]
 
